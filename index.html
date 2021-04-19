@@ -7,16 +7,57 @@
     <link rel="stylesheet" href="bootstrap.css" type="text/css">
 </head>
 <body>
-    <div id="entradas" class="container">
-        <h1>Conversor de texto a diferentes bases</h1>
-        <textarea class="form-control" id="msg" cols="30" rows="10"></textarea>
-        <button onclick="conversorAB()" class="btn btn-primary">Convertir</button>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="textobase" class="col-md-6">
+                <h1>Conversor de texto a diferentes bases</h1>
+                <textarea class="form-control" id="msg" cols="30" rows="10"></textarea>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        Base a convertir           
+                        <select class="form-control" id="baseConvertir">
+                            <option>2</option>
+                            <option>8</option>
+                            <option>10</option>
+                            <option>16</option>
+                        </select>
+                    </div> 
+                    <div class="col-md-1">
+                        <br>
+                        <button onclick="conversorTB()" class="btn btn-primary">Convertir</button>
+                    </div>
+                </div>
+            </div>
+            <div id="basetexto" class="col-md-6">
+                <h1>Conversor de diferentes bases a texto</h1>
+                <textarea class="form-control" id="msgBase" cols="30" rows="10"></textarea>
+                <br>            
+                <div class="row">
+                    <div class="col-md-2">
+                        Base origen           
+                        <select class="form-control" id="baseOrigen">
+                            <option>2</option>
+                            <option>8</option>
+                            <option>10</option>
+                            <option>16</option>
+                        </select>
+                    </div> 
+                    <div class="col-md-1">
+                        <br>
+                        <button onclick="conversorBT()" class="btn btn-primary">Convertir</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
-
-    <div class="container">            
+    
+    <div class="container">   
+        <br>         
         <div id="convertido"></div>
+        <br>
         <a href="" id="link"></a>
-    </div>
+    </div>   
     
     <script src='main.js'></script>
 </body>
